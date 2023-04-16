@@ -1,0 +1,6 @@
+[submodule "components/lvgl"]
+	path = components/lvgl
+	url = git@github.com:lvgl/lvgl.git
+[submodule "components/sdl"]
+	path = components/sdl
+	url = git@github.com:libsdl-org/SDL.git
