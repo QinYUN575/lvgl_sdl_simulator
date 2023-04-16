@@ -5,7 +5,7 @@
 ## Support Platform
 
 - [x] Linux
-- [ ] MacOS
+- [x] MacOS
 - [ ] Windows
 
 ## Build && Run

@@ -79,6 +79,8 @@ typedef enum _tisilicon_log_level
    #define read_cycle() (uint64_t)clock()
 #elif defined(__APPLE__)
    /* Mac OS code */
+    #include <time.h>
+    #define read_cycle() (uint64_t)clock()
 #else
    /* Other code */
 #endif
