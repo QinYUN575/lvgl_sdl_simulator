@@ -75,7 +75,8 @@ typedef enum _tisilicon_log_level
    /* Windows code */
 #elif defined(__linux__)
    /* Linux code */
-   #define read_cycle() (uint32_t)clock()
+   #include <time.h>
+   #define read_cycle() (uint64_t)clock()
 #elif defined(__APPLE__)
    /* Mac OS code */
 #else

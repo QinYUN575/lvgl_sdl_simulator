@@ -20,17 +20,13 @@ static const char *TAG = "LVGL";
 int main()
 {
     LOGI(TAG, "===============================");
-    LOGI(TAG, "Hello World!");
-    // LOGI(TAG, "Project     : %s\n", PROJECT_NAME());
-    // LOGI(TAG, "Author      : %s\n", AUTHOR_INFO());
-    // LOGI(TAG, "Version     : %s\n", VERSION(MAJOR_VERSION, MINOR_VERSION, PATCH_VERSION));
-
     LOGI(TAG, "Author: %s", COMMIT_AUTHOR);
     LOGI(TAG, "Email: %s", AUTHOR_EMAIL);
     LOGI(TAG, "Commit version: %s", COMMIT_COUNT);
     LOGI(TAG, "Commit hash: %s", COMMIT_HASH);
-    LOGI(TAG, "Compile Time: %s %s\n", __TIME__, __DATE__);
+    LOGI(TAG, "Compile Time: %s %s", __TIME__, __DATE__);
 
+    LOGI(TAG, "Hello World!");
     LOGI(TAG, "===============================");
     
     return 0;

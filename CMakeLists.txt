@@ -2,18 +2,20 @@ cmake_minimum_required(VERSION 3.16)
 
 project(lvgl-sdl-simulator)
 
+# 添加头文件搜索路径
+include_directories(include)
+include_directories(components/utils/include)
+include_directories(components/lvgl)
+include_directories(components/sdl/include/sdl3)
+include_directories(components/lvgl_port_sdl)
+
+# 添加模块
 add_subdirectory(components/lvgl)
 add_subdirectory(components/sdl)
 # add_subdirectory(components/lvgl_port_sdl)
 
 # 调用 src/ 目录的子 CMakeLists.txt
 add_subdirectory(src)
-
-# 添加头文件搜索路径
-include_directories(components/utils/include)
-include_directories(components/lvgl)
-include_directories(components/sdl/include/sdl3)
-include_directories(components/lvgl_port_sdl)
 
 # 添加编译选项
 add_compile_definitions(USE_LV_LOG) # 告诉 LVGL 使用日志输出
