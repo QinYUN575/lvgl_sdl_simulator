@@ -54,3 +54,4 @@ dkms.conf
 
 # Build
 build/
+.DS_Store

@@ -58,7 +58,6 @@ typedef enum _tisilicon_log_level
 #endif /* CONFIG_LOG_COLORS */
 /* clang-format on */
 
-#define LOG_FORMAT(letter, format) LOG_COLOR_##letter #letter " (%lu) %s: " format LOG_RESET_COLOR "\n"
 
 #ifdef LOG_LEVEL
 #undef CONFIG_LOG_LEVEL
@@ -77,12 +76,15 @@ typedef enum _tisilicon_log_level
    /* Linux code */
    #include <time.h>
    #define read_cycle() (uint64_t)clock()
+    #define LOG_FORMAT(letter, format) LOG_COLOR_##letter #letter " (%lu) %s: " format LOG_RESET_COLOR "\n"
 #elif defined(__APPLE__)
    /* Mac OS code */
     #include <time.h>
     #define read_cycle() (uint64_t)clock()
+    #define LOG_FORMAT(letter, format) LOG_COLOR_##letter #letter " (%llu) %s: " format LOG_RESET_COLOR "\n"
 #else
    /* Other code */
+#define LOG_FORMAT(letter, format) LOG_COLOR_##letter #letter " (%lu) %s: " format LOG_RESET_COLOR "\n"
 #endif
 
 

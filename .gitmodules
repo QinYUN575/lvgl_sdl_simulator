@@ -4,3 +4,9 @@
 [submodule "components/sdl"]
 	path = components/sdl
 	url = git@github.com:libsdl-org/SDL.git
+[submodule "components/lv_drivers"]
+	path = components/lv_drivers
+	url = https://github.com/lvgl/lv_drivers.git
+[submodule "components/lv_examples"]
+	path = components/lv_examples
+	url = https://github.com/lvgl/lv_examples.git

@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(utils LANGUAGES C CXX VERSION "1.0.0")
+get_filename_component(BASENAME ${CMAKE_CURRENT_LIST_DIR} NAME)
+project(${BASENAME})
 
-include_directories(include)
+aux_source_directory(src SRC_FILES)
+add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include")
